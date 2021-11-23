@@ -38,7 +38,7 @@ def batch_stat(batches: Tuple[List[List[List[int]]],
 
 if __name__ == "__main__":
     reader = Reader(config.bert_model)
-    reader.read_all_data("./data/genia_sample/", "train.data", "dev.data", "test.data")
+    reader.read_all_data("./data/litbank/", "train.data", "dev.data", "test.data")
 
     # print reader.train_sents[0]
     train_batches, dev_batches, test_batches = reader.to_batch(config.batch_size)
